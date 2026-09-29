@@ -1,0 +1,70 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    display: flex;
+    justify-content: center;
+}
+
+.container{
+    counter-reset: soma;
+}
+
+.container-box{
+    margin-top: 40px;
+    display: flex;
+    gap: 20px;
+}
+
+.sr-only{
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1;
+    padding: 0;
+    border: none;
+    overflow: hidden;
+    white-space: nowrap;
+    clip: reot(0,0,0,0);
+}
+
+.box{
+    margin: 0;
+    border: solid 1px black;
+    width: 78px;
+    height: 78px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: .15s;
+}
+
+.sr-only:checked + .box{
+    background-color: gold;
+    border: solid 3px black;
+}
+
+.sr-only:focus-visible+ .box{
+    outline: 3px dashed #0056b3;
+}
+
+.soma-10:checked + .box{
+    counter-increment: soma 10;
+}
+
+.soma-32:checked + .box{
+    counter-increment: soma 32;
+}
+
+.soma-64:checked + .box{
+    counter-increment: soma 64;
+}
+.sub-15:checked + .box{
+    counter-increment: soma -15;
+}
+
+.soma::after{
+    content: ' ' counter(soma);
+}

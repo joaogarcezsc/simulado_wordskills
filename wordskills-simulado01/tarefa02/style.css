@@ -1,0 +1,64 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 20px;
+  border: 1px solid #719bb8;
+}
+
+.container-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  transition: 1s;
+}
+
+.container-list label::before {
+  content: "";
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  margin-right: 12px;
+  border: 1.5px solid #000;
+  transition: all 0.4s ease;
+}
+
+.container-list input:checked + label {
+  text-decoration: line-through;
+  font-style: italic;
+  color: #888;
+}
+
+.container-list input:checked + label::before {
+  content: "✓ ";
+  border: none;
+  width: auto;
+  height: auto;
+  font-width: bold;
+  font-size: 20px;
+  color: #555;
+  margin-right: 10px;
+  transform: scale(1.1);
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  clip: rect(0, 0, 0, 0);
+}

@@ -1,0 +1,105 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #e5e5e5;
+}
+
+/* ---------- Bandeira (proporção 3:2) ---------- */
+
+.bandeira {
+  position: relative;
+  width: 600px;
+  height: 400px;
+  background-color: #fff;
+  border: 1px solid #999;
+}
+
+/* ---------- Taegeuk (círculo vermelho e azul) ---------- */
+
+.taeguk {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+
+  background: linear-gradient(#cd2e3a 50%, #0047a0 50%);
+
+  transform: translate(-50%, -50%) rotate(-33.69deg);
+}
+
+.taeguk::before,
+.taeguk::after {
+  content: "";
+  position: absolute;
+  top: 50px;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+.taeguk::before {
+  left: 0;
+  background-color: #0047a0;
+}
+
+.taeguk::after {
+  right: 0;
+  background-color: #cd2e3a;
+}
+
+/* ---------- Trigramas ---------- */
+
+.trigrama {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100px;
+  height: 64px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.barra {
+  height: 16px;
+  background-color: #000;
+}
+
+.barra.quebrada {
+  display: flex;
+  justify-content: space-between;
+  background-color: transparent;
+}
+
+.barra.quebrada::after,
+.barra.quebrada::before {
+  content: "";
+  width: 42px;
+  background-color: #000;
+}
+
+.superior-esquerdo {
+  transform: translate(-50%, -50%) translate(-135px, -90px) rotate(-56.31deg);
+}
+
+.superior-direito {
+  transform: translate(-50%, -50%) translate(135px, -90px) rotate(56.31deg);
+}
+
+.inferior-esquerdo {
+  transform: translate(-50%, -50%) translate(-135px, 90px) rotate(56.31deg);
+}
+
+.inferior-direito {
+  transform: translate(-50%, -50%) translate(135px, 90px) rotate(-56.31deg);
+}

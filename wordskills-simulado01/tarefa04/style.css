@@ -1,0 +1,98 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    display: flex;
+    justify-content: center;
+}
+
+.container-semaforo{
+    margin-top: 80px;
+    background: #222222;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.cor{
+    padding: 40px;
+    border-radius: 50%;
+    opacity: 20%;
+}
+
+.vermelho{
+    background: red;
+    animation: vermelho 8s linear infinite;
+}
+
+.laranja{
+    background: yellow;
+    animation: amarelo 8s linear infinite;
+}
+
+.verde{
+    background: green;
+    animation: verde 8s linear infinite;
+}
+
+@keyframes verde {
+    0%{
+        opacity: 100%;
+    }
+    50%{
+        opacity: 100%;
+    }
+    50.1%{
+        opacity: 20%;
+    }
+    100%{
+        opacity: 20%;
+    } 
+}
+
+@keyframes amarelo {
+    0%{
+        opacity: 20%;
+    }
+    50%{
+        opacity: 20%;
+    }
+    50.1%{
+        opacity: 100%;
+    }
+    75.5%{
+        opacity: 100%;
+    }
+    75.6%{
+        opacity: 20%;
+    }
+    100%{
+        opacity: 20%;
+    } 
+}
+
+@keyframes vermelho {
+    0%{
+        opacity: 20%;
+    }
+    50%{
+        opacity: 20%;
+    }
+    50.1%{
+        opacity: 20%;
+    }
+    75.5%{
+        opacity: 20%;
+    }
+    75.6%{
+        opacity: 100%;
+    }
+    100%{
+        opacity: 100%;
+    } 
+    100.1%{
+        opacity: 100%;
+    } 
+}
