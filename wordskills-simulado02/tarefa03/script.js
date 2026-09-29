@@ -1,8 +1,8 @@
-const inputMinimo = document.getElementById("minimo");
-const inputMaximo = document.getElementById("maximo");
-const textoMinimo = document.getElementById("textoMinimo");
-const textoMaximo = document.getElementById("textoMaximo");
-const selecionado = document.getElementById("selecionado");
+const inputMinimo = document.querySelector("#minimo");
+const inputMaximo = document.querySelector("#maximo");
+const textoMinimo = document.querySelector("#textoMinimo");
+const textoMaximo = document.querySelector("#textoMaximo");
+const selecionado = document.querySelector("#selecionado");
 
 const PASSO = 50;
 const LIMITE = 1000;
